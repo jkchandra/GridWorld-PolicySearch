@@ -24,13 +24,13 @@ The following steps are taken in the valueIteration method
 1. Initialize U and U’ as a 2D array of ActionUtility
 2. Initialize Number of Iterations = 0, States, and delta
 3. While (delta > (epsilon*(1-discountRate)/discountRate) do:
-  -Delta = 0
-  -U  U’
-  -For each State in States:
-    -If Wall, Continue
-    -Find Maximum ActionUtility of State
-    -Find the delta as the difference between the utility of state between U and U’
-  -Increment Number of Iterations
+   - Delta = 0
+   - U  U’
+   - For each State in States:
+     - If Wall, Continue
+     - Find Maximum ActionUtility of State
+     - Find the delta as the difference between the utility of state between U and U’
+   - Increment Number of Iterations
 4. Returns U
 
 ## Policy Iteration
@@ -40,16 +40,16 @@ The following steps are taken in the policyIteration method
 2. Initialize Number of Iterations = 0, States, unchanged = true
 3. Randomly sets policy as the initial policy
 4. While (unchanged = false)
-  -U = policyEval(StateGrid, U)
-  -Unchanged = true
-  -For each State in States:
-    -If Wall, Continue
-    -Find Maximum ActionUtility of State as BestActionUtility
-    -Let CurrentActionUtility be the Current ActionUtility of State based on U
-    -If (BestActionUtility > CurrentActionUtility)
-      -Set State Action as Action from BestActionUtility
-      -Unchanged = false
-  -Increment Number of Iterations
+   - U = policyEval(StateGrid, U)
+   - Unchanged = true
+   - For each State in States:
+     - If Wall, Continue
+     - Find Maximum ActionUtility of State as BestActionUtility
+     - Let CurrentActionUtility be the Current ActionUtility of State based on U
+     - If (BestActionUtility > CurrentActionUtility)
+       - Set State Action as Action from BestActionUtility
+       - Unchanged = false
+  - Increment Number of Iterations
 5. Returns U
 
 ## Policy Evaluation
@@ -57,7 +57,7 @@ The following steps are taken in the policyIteration method
 The following steps are taken in the policyEval method
 1. Initialize U and U’
 2. For K to K_VAL number of iterations:
-  -U  U’
-  -For each State in States:
-    -If Wall, Continue
-    -Calculates the Utility of the given Action
+   - U  U’
+   - For each State in States:
+     - If Wall, Continue
+     - Calculates the Utility of the given Action
